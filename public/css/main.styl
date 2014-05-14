@@ -1,0 +1,56 @@
+item-size = 6em
+
+body
+  border 0
+  margin 0
+  padding 0
+  background-color #fdf6e3
+  font 1em "Lucida Grande", Helvetica, Arial, sans-serif
+
+#header
+  width 100%
+  height 1.4em
+  padding .2em
+  background-color #eee8d5
+  color #cb4b16
+  font-size 1.4em 
+  
+#content
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  margin .2em
+  
+.item
+  height item-size
+  width item-size
+  margin .2em
+  background-color #eee8d5
+  
+.fullbutton
+  display flex
+  align-items: center
+  justify-content: center
+
+.item .fullbutton
+  visibility: hidden
+
+.item:hover .fullbutton
+  visibility: visible
+
+.item .fullbutton#additem
+  visibility: visible
+  
+.item .popup
+  visibility: hidden
+
+.item:hover .popup
+  top: (item-size * -0.5)
+  left: 0
+  height: (item-size / 2)
+  width: (item-size * 4)
+  background-color #fff
+  position: relative
+  visibility: visible
+  z-index: 2
+  
