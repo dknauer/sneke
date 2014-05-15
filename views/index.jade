@@ -1,17 +1,48 @@
 doctype html
 head
   link(rel='stylesheet', href='/css/main.css')
+  link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400' type='text/css')
+  link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato' type='text/css')
+  
   script(src='/js/jquery-2.1.1.min.js')
   script(src='/js/d3.v3.min.js')
   script(src='/socket.io/socket.io.js')
 
-  //script(src='/js/client.js')
-  script(src='/js/test.js')
+  script(src='/js/data.js')
+  script(src='/js/client.js')
+  script(src='/js/menu.js')
   
   title sneke-client
 body
   div#container
-    div#header
-      |sneke-client
-      //input.loadall(type="submit", value="Load All")
-    div#content
+    div#headwrap
+      div#header
+        div.headpad
+        div#menubtn
+          svg(height="100%",width="100%",viewbox="0 0 100 100")
+            rect( x="5", y="25", width="90", height="15", rx="8", ry="8" )
+            rect( x="5", y="50", width="90", height="15", rx="8", ry="8" )
+            rect( x="5", y="75", width="90", height="15", rx="8", ry="8" )
+        div.headpad
+        div#title
+          |sneke-client
+        div.headpad
+        div#utils
+          div.util.button#additem
+            svg(height="100%",width="100%",viewbox="0 0 100 100")
+              rect( x="40", y="10", width="20", height="80", rx="8", ry="8", fill="#268bd2" )
+              rect( x="10", y="40", width="80", height="20", rx="8", ry="8", fill="#268bd2" )            
+          div.util
+            input#urltext( type="text" )
+        div.headpad
+    div#contentwrap
+      div#menuwrap
+        div#menu
+      div#content
+        div#items
+        div#final
+          div.item
+            svg(height="100%",width="100%",viewbox="0 0 100 100")
+              circle( cx="38", cy="50", r="5", fill="#268bd2" )
+              circle( cx="50", cy="50", r="5", fill="#268bd2" )
+              circle( cx="62", cy="50", r="5", fill="#268bd2" )
