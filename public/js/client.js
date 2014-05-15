@@ -8,7 +8,7 @@ $(function(){
     socket.emit( 'add',
       {
         'url': $( '#urltext' ).val()
-       ,'progress': '35'
+       ,'progress': parseInt(Math.random() * 100)
       }
     );
   });
